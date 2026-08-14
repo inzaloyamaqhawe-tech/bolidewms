@@ -1,0 +1,150 @@
+Subject: Bolide WMS — Warehouse & Production Management System (Live Demo Ready) — Request for Quote
+
+Dear Mam Kgomotso,
+
+I'd like to introduce a Warehouse & Production Management System (WMS) I've
+developed and branded for Bolide Tanzania, and to request a formal quote
+for taking it from working demo to full production deployment.
+
+WHAT THIS SYSTEM IS
+--------------------
+Bolide WMS is a purpose-built, web-based platform that manages the full
+lifecycle of a Manufacturing Order (MO) — from the moment it's raised,
+through materials being picked and issued from the warehouse, through
+every stage of the production floor, to final transfer and completion. It
+replaces the manual spreadsheets, paper pick-slips, and disconnected
+tracking that most warehouse/production teams rely on with one connected,
+real-time system that warehouse staff, production staff, and management
+all look at together.
+
+It is already live and fully working as a demo, running end-to-end
+against realistic data (60+ manufacturing orders across 10 customers and
+6 product/assembly types). This isn't a set of mockups — every workflow
+below actually works: logging in, picking and issuing materials, raising
+and approving reissue requests, tracking stock — and the data persists
+between sessions, exactly as it would in production.
+
+Live demo: http://dsa-production:5001
+Demo logins:
+  Warehouse Admin  — LANGA / DSA100%
+  DSA Production   — SIZWE / DSA200%
+  Management       — SAM   / DSA300%
+  Warehouse User    — DANI  / DSA400%
+
+HOW IT WORKS
+------------
+The system is built around role-based access, so each person only sees
+what's relevant to their job:
+
+  - Warehouse Admin: full visibility — dashboard, MO list, bulk stock
+    control, reports, user management, and approves/rejects reissue
+    requests raised by production.
+  - DSA Production: processes MOs on the shop floor, tracks transfer
+    progress, sees which MOs are assigned to which workstation and
+    worker, and can request material reissues when something's short,
+    damaged, or miscounted.
+  - Management: oversight view — transfer progress, assigned MOs,
+    production user performance, and universal (cross-period) reporting.
+  - Warehouse User: picks and issues materials against MOs, manages bulk
+    stock.
+
+Every Manufacturing Order moves through a clear lifecycle — New →
+Started → (Partially/Fully) Issued → Transferred → Completed — and the
+system tracks exactly where each one sits, in real time, at every stage.
+
+WHAT IT DOES (CORE MODULES)
+----------------------------
+  - Dashboard: live KPI overview — open MOs, MO progress broken down by
+    due month, and an activity chart of Created/Started/Issued/
+    Transferred/Completed volumes over the past 5 months.
+  - MO List: every Manufacturing Order, searchable and filterable by
+    status, with pick %, due-date countdown, and inline comments.
+  - Bill of Materials per MO: each MO carries its own material list with
+    required vs. issued quantity tracked line-by-line.
+  - Transfer Progress: tracks what percentage of each MO's output has
+    been transferred against what's required, with status filtering.
+  - Assigned MOs / Production Floor Tracking: shows which workstation and
+    which worker an MO currently sits with, and its progress through the
+    full production line (Cut → In Prep → Glue → Build → Scribe →
+    Polishing → Scope → Measurement → Packaging).
+  - Bulk Stock Control & Shortage Reporting: warehouse-wide stock levels
+    for every material, with required quantity vs. stock on hand
+    computed automatically, and shortages flagged before they stall
+    production.
+  - Reissue Requests: a full request → approve/reject → complete
+    workflow for when production needs materials reissued (damaged,
+    miscounted, or short-supplied stock), with a clear audit trail of who
+    requested what, who approved it, and why.
+  - Reports: a running log of every material issue, reissue, and stock
+    movement, exportable for recordkeeping.
+  - Production Users & Workstations: manages the floor team, their
+    workstation assignments, and performance/activity.
+  - User Management: role assignment and access control for every login.
+  - Bulk Issue & Reissue Documents: generates clean, printable warehouse
+    documents for every material issue and reissue.
+
+HOW IT HELPS
+------------
+  - Real-time visibility: management and warehouse can see exactly where
+    every order is, with no phone calls or spreadsheet chasing.
+  - Fewer stalled production runs: shortages are visible before they
+    become a crisis, not after a workstation is already stuck waiting.
+  - Full accountability: every material issue, reissue, and status change
+    is logged against a specific user, MO, and timestamp.
+  - Faster floor coordination: workers and supervisors always know which
+    MO is where, and who's working on what.
+  - Less paperwork: pick slips, bulk issue documents, and reissue
+    documents are generated by the system instead of filled out by hand.
+  - Role-appropriate access: nobody is overwhelmed with screens that
+    aren't relevant to their job, and sensitive actions (approving
+    reissues, editing users) stay with the right people.
+  - Data for decisions: management gets performance and throughput
+    reporting without having to ask the warehouse to compile it.
+
+FEATURES & TECHNICAL SPECIFICATION
+------------------------------------
+  - Fully web-based — runs in any modern browser, no installation on
+    individual machines.
+  - Role-based authentication with 4 (extensible) access levels.
+  - Backend: Python/Flask, exposing a clean REST API — straightforward to
+    connect to a real production database (SQL Server or otherwise) or an
+    existing ERP.
+  - Frontend: lightweight, dependency-minimal, fast to load even on
+    modest hardware/connections — no heavy framework overhead.
+  - Deployable to cloud hosting (tested on Render) or on-premise
+    infrastructure, depending on your preference.
+  - Live, persistent data — every action (pick, issue, reissue, comment,
+    stock edit) is saved and reflected immediately across all users.
+  - Exportable reporting (Excel-compatible exports, print-formatted
+    documents).
+  - Configurable material catalogue / Bill of Materials per product type.
+  - Proven at 60+ concurrent Manufacturing Orders in testing; designed to
+    scale to full production volume.
+  - Already carries Bolide Tanzania's branding (logo, colour palette,
+    document headers) — ready to present internally or to stakeholders
+    as-is.
+
+CURRENT STATUS
+--------------
+The system above is complete and working today as a demo environment. To
+move to a production rollout, the remaining work is: connecting it to
+Bolide's real data/database (in place of the demo fixture data), any
+workflow adjustments specific to your operation, hosting/infrastructure
+setup, user accounts for your actual team, and ongoing support.
+
+REQUEST
+-------
+I'd like to request a formal quote (or, if you'd rather, a short call to
+scope requirements first) covering:
+  1. Production build-out and integration with your live systems/database
+  2. Hosting and deployment
+  3. User training and rollout support
+  4. Ongoing maintenance/support terms
+
+Happy to walk through the live demo together at a time that suits you.
+Looking forward to your feedback.
+
+Kind regards,
+Langelihle Ngidi
+Mechatronics & Software Specialist
+Centenary Networks

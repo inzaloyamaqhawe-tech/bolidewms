@@ -1,0 +1,16 @@
+# Mutable demo state - regenerated at runtime from demo_data_seed.json.
+# Keeping it out of git means every deploy/reset starts from the clean seed.
+demo_data.json
+
+# Superseded by public/index.html (the deployable copy) - kept locally only
+# as a reference of the pre-restructure file.
+dsav0011_demo.html
+
+# Logs / local scratch
+*.log
+__pycache__/
+*.pyc
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
