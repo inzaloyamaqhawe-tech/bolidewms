@@ -881,7 +881,7 @@ def root():
     if os.path.exists(index_path):
         return send_from_directory(PUBLIC_DIR, "index.html")
     return jsonify({
-        "service": "DSA Warehouse DEMO backend", "status": "ok",
+        "service": "Bolide Tanzania WMS DEMO backend", "status": "ok",
         "mos": len(DB["mos"]), "port": PORT,
         "note": "public/index.html not found - API-only mode",
     }), 200
@@ -890,7 +890,7 @@ def root():
 @app.route("/api/status", methods=["GET"])
 def api_status():
     return jsonify({
-        "service": "DSA Warehouse DEMO backend", "status": "ok",
+        "service": "Bolide Tanzania WMS DEMO backend", "status": "ok",
         "mos": len(DB["mos"]), "port": PORT,
     }), 200
 
