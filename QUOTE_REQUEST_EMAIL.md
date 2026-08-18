@@ -24,7 +24,7 @@ below actually works: logging in, picking and issuing materials, raising
 and approving reissue requests, tracking stock — and the data persists
 between sessions, exactly as it would in production.
 
-Live demo: http://dsa-production:5001
+Live demo: https://bolidewms.onrender.com
 Demo logins:
   Warehouse Admin  — LANGA / DSA100%
   DSA Production   — SIZWE / DSA200%
