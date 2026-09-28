@@ -81,36 +81,41 @@ for i, (first, surname) in enumerate(WORKER_NAMES):
     })
 
 # ---------------------------------------------------------------------------
-# 4. MATERIAL CATALOG (ItemTrack.dbo.ic_Item) - fibre / RF cable assembly BOM
+# 4. MATERIAL CATALOG (ItemTrack.dbo.ic_Item) - Bolide Tanzania's real shop
+# catalogue (fibre cables, ducts, accessories & panels), so this demo's stock
+# items and shortages are ones the client already recognises from their own
+# website rather than a generic/foreign parts list.
 # ---------------------------------------------------------------------------
 MATERIALS = [
-    {"item_number": "FO-CONN-SC-APC", "description": "SC/APC Fibre Connector", "uom": "EA"},
-    {"item_number": "FO-CONN-LC-UPC", "description": "LC/UPC Fibre Connector", "uom": "EA"},
-    {"item_number": "FO-PIGTAIL-SM", "description": "Single-Mode Fibre Pigtail 1.5m", "uom": "EA"},
-    {"item_number": "FO-CABLE-SM-2C", "description": "Single-Mode Fibre Cable 2-Core", "uom": "M"},
-    {"item_number": "FO-CABLE-SM-4C", "description": "Single-Mode Fibre Cable 4-Core", "uom": "M"},
-    {"item_number": "FO-SPLITTER-1X8", "description": "1x8 PLC Fibre Splitter", "uom": "EA"},
-    {"item_number": "FO-SPLITTER-1X16", "description": "1x16 PLC Fibre Splitter", "uom": "EA"},
-    {"item_number": "FO-PATCHPANEL-24", "description": "24-Port Fibre Patch Panel", "uom": "EA"},
-    {"item_number": "FO-SPLICE-TRAY", "description": "Fibre Splice Tray", "uom": "EA"},
-    {"item_number": "FO-HEATSHRINK-45", "description": "45mm Fibre Splice Protector Heat Shrink", "uom": "EA"},
-    {"item_number": "RF-CONN-N-MALE", "description": "N-Type Male RF Connector", "uom": "EA"},
-    {"item_number": "RF-CONN-N-FEMALE", "description": "N-Type Female RF Connector", "uom": "EA"},
-    {"item_number": "RF-CONN-SMA-MALE", "description": "SMA Male RF Connector", "uom": "EA"},
-    {"item_number": "RF-CABLE-LMR400", "description": "LMR-400 RF Coaxial Cable", "uom": "M"},
-    {"item_number": "RF-CABLE-LMR240", "description": "LMR-240 RF Coaxial Cable", "uom": "M"},
-    {"item_number": "RF-BOOT-WEATHERPROOF", "description": "Weatherproof Connector Boot", "uom": "EA"},
-    {"item_number": "RF-GROUNDING-KIT", "description": "Coax Grounding Kit", "uom": "EA"},
-    {"item_number": "CRIMP-FERRULE-STD", "description": "Standard Crimp Ferrule", "uom": "EA"},
-    {"item_number": "CABLE-TIE-200MM", "description": "200mm Cable Tie", "uom": "EA"},
-    {"item_number": "HEATSHRINK-TUBE-12MM", "description": "12mm Heat Shrink Tube", "uom": "M"},
-    {"item_number": "LABEL-CABLE-WRAP", "description": "Cable Wrap Label", "uom": "EA"},
-    {"item_number": "FTTA-JUMPER-2M", "description": "FTTA Fibre Jumper 2m", "uom": "EA"},
-    {"item_number": "FTTA-BREAKOUT-KIT", "description": "FTTA Breakout Kit", "uom": "EA"},
-    {"item_number": "ARMOUR-TAPE", "description": "Armoured Cable Tape", "uom": "M"},
-    {"item_number": "SILICA-GEL-PACK", "description": "Silica Gel Desiccant Pack", "uom": "EA"},
-    {"item_number": "CABLE-GLAND-M20", "description": "M20 Cable Gland", "uom": "EA"},
-    {"item_number": "PATCH-CORD-SC-1M", "description": "SC-SC Patch Cord 1m", "uom": "EA"},
+    {"item_number": "OFC-MICR-096F", "description": "Fibre Cable Micro 96F (G652D)", "uom": "M"},
+    {"item_number": "OFC-MICR-072F", "description": "Fibre Cable Micro 72F (G652D)", "uom": "M"},
+    {"item_number": "OFC-MICR-048F", "description": "Fibre Cable Micro 48F (G652D)", "uom": "M"},
+    {"item_number": "OFC-MICR-024F", "description": "Fibre Cable Micro 24F (G652D)", "uom": "M"},
+    {"item_number": "OFC-ADSS-096F", "description": "Fibre Cable ADSS 96F (G652D, 80m span)", "uom": "M"},
+    {"item_number": "OFC-ADSS-048F", "description": "Fibre Cable ADSS 48F (G652D, 80m span)", "uom": "M"},
+    {"item_number": "OFC-ADSS-024F", "description": "Fibre Cable ADSS 24F (G652D, 80m span)", "uom": "M"},
+    {"item_number": "G657A1-FIG8", "description": "G657A1 Fig-8 Drop Cable", "uom": "M"},
+    {"item_number": "D-HDPE-110-95", "description": "Kabelflex 110/95mm Duct & Coupling", "uom": "M"},
+    {"item_number": "D-7WAY-BLUE", "description": "7-Way Duct 7x12/10 (Blue, Direct Buried)", "uom": "M"},
+    {"item_number": "D-7WAY-GREEN", "description": "7-Way Duct 7x12/10 (Green, Direct Buried)", "uom": "M"},
+    {"item_number": "D-HDPE-40-35", "description": "HDPE 40/35 Duct (500m Coil)", "uom": "M"},
+    {"item_number": "PS26-40-01", "description": "Shrink Splice Protector 40mm", "uom": "EA"},
+    {"item_number": "ENDCAP-12MM", "description": "Duct End Cap 12mm", "uom": "EA"},
+    {"item_number": "ENDCAP-40MM", "description": "Duct End Cap 40mm", "uom": "EA"},
+    {"item_number": "COUPLER-40-35", "description": "HDPE 40/35 Duct Coupler", "uom": "EA"},
+    {"item_number": "BARRIER-TAPE-150", "description": "Warning Barrier Tape (150mm)", "uom": "EA"},
+    {"item_number": "PANEL-24-LCPC", "description": "Patch Panel 24-Way LC/PC 1U", "uom": "EA"},
+    {"item_number": "PANEL-48-LCPC", "description": "Patch Panel 48-Way LC/PC 1U", "uom": "EA"},
+    {"item_number": "PANEL-96-LCPC", "description": "Patch Panel 96-Way LC/PC 2U", "uom": "EA"},
+    {"item_number": "PANEL-SLIDE-24SC", "description": "Sliding Patch Panel 24-Way SC/PC 1U", "uom": "EA"},
+    {"item_number": "ODF-24-FCPC", "description": "ODF Module 24-Core FC/PC", "uom": "EA"},
+    {"item_number": "ODF-48-FCPC", "description": "ODF Module 48-Core FC/PC", "uom": "EA"},
+    {"item_number": "PIGTAIL-12CLR-LC", "description": "Pigtail Set 12-Colour LC/PC (2m)", "uom": "EA"},
+    {"item_number": "PIGTAIL-FCPC", "description": "Pigtail FC/PC (2m)", "uom": "EA"},
+    {"item_number": "CLO-HTSC-318", "description": "CLO-HTSC-318 Dome Closure (96F, 4-Tray)", "uom": "EA"},
+    {"item_number": "FTTH-OUTLET-WALL", "description": "FTTH Outlet Box (Wall Mount)", "uom": "EA"},
+    {"item_number": "MANHOLE-MD700", "description": "MD700 Manhole Lid, Frame & Lock", "uom": "EA"},
+    {"item_number": "CLO-UNIV-96F", "description": "Universal Closure 96F (4-Tray)", "uom": "EA"},
 ]
 for i, m in enumerate(MATERIALS):
     m["ici_id"] = 5000 + i
@@ -120,30 +125,28 @@ for i, m in enumerate(MATERIALS):
 MATERIAL_BY_ITEM = {m["item_number"]: m for m in MATERIALS}
 
 ASSEMBLY_BOM = {
-    "Universal Assembly FO": ["FO-CONN-SC-APC", "FO-CONN-LC-UPC", "FO-PIGTAIL-SM", "FO-CABLE-SM-2C",
-                              "FO-HEATSHRINK-45", "CABLE-TIE-200MM", "LABEL-CABLE-WRAP"],
-    "FO Splitter": ["FO-SPLITTER-1X8", "FO-SPLITTER-1X16", "FO-SPLICE-TRAY", "FO-PIGTAIL-SM",
-                    "FO-HEATSHRINK-45", "LABEL-CABLE-WRAP"],
-    "RF Cable Assembly": ["RF-CONN-N-MALE", "RF-CONN-N-FEMALE", "RF-CONN-SMA-MALE", "RF-CABLE-LMR400",
-                          "RF-CABLE-LMR240", "RF-BOOT-WEATHERPROOF", "RF-GROUNDING-KIT", "CRIMP-FERRULE-STD"],
-    "FO Cable Assembly FTTA": ["FTTA-JUMPER-2M", "FTTA-BREAKOUT-KIT", "ARMOUR-TAPE", "CABLE-GLAND-M20",
-                               "SILICA-GEL-PACK", "CABLE-TIE-200MM"],
-    "FO Patch Panel": ["FO-PATCHPANEL-24", "PATCH-CORD-SC-1M", "FO-SPLICE-TRAY", "LABEL-CABLE-WRAP",
-                       "FO-HEATSHRINK-45"],
-    "N/A": ["CABLE-TIE-200MM", "LABEL-CABLE-WRAP", "HEATSHRINK-TUBE-12MM"],
+    "Micro-Duct Cable Run Kit": ["OFC-MICR-096F", "OFC-MICR-048F", "D-HDPE-110-95", "D-HDPE-40-35",
+                                 "ENDCAP-40MM", "COUPLER-40-35"],
+    "Aerial ADSS Installation Kit": ["OFC-ADSS-096F", "OFC-ADSS-048F", "OFC-ADSS-024F",
+                                     "BARRIER-TAPE-150", "CLO-UNIV-96F"],
+    "FTTH Drop & Termination Kit": ["G657A1-FIG8", "FTTH-OUTLET-WALL", "PIGTAIL-FCPC",
+                                    "ENDCAP-12MM", "PS26-40-01"],
+    "Patch Panel & ODF Kit": ["PANEL-24-LCPC", "PANEL-48-LCPC", "PANEL-96-LCPC", "PANEL-SLIDE-24SC",
+                              "ODF-24-FCPC", "ODF-48-FCPC", "PIGTAIL-12CLR-LC"],
+    "Closure & Manhole Kit": ["CLO-HTSC-318", "CLO-UNIV-96F", "MANHOLE-MD700", "D-7WAY-BLUE", "D-7WAY-GREEN"],
+    "N/A": ["ENDCAP-12MM", "BARRIER-TAPE-150", "PS26-40-01"],
 }
 
 CUSTOMERS = [
-    ("MCT01", "MCT TELECOMMUNICATIONS (PTY) LTD"),
-    ("MCT02", "M C T TELECOMMUNICATIONS (PTY) LTD"),
-    ("UNKDEB", "UNKNOWN DEBTOR (ZAR - COD)"),
-    ("ALARIS", "ALARIS ANTENNAS (PTY) LTD"),
-    ("VODA01", "VODACOM (PTY) LTD"),
-    ("THALES", "THALES AEROSPACE COMMUNICATIONS CAPE TOWN (PTY) LTD"),
-    ("DARKFI", "DARK FIBRE AFRICA (PTY) LTD"),
-    ("REUTEC", "REUTECH RADAR SYSTEMS, A DIV OF REUTECH (PTY) LTD"),
-    ("MTN01", "MTN SOUTH AFRICA (PTY) LTD"),
-    ("TELKOM", "TELKOM SA SOC LTD"),
+    ("VODA-TZ", "VODACOM TANZANIA PLC"),
+    ("NOKIA-TZ", "NOKIA SOLUTIONS AND NETWORKS TANZANIA"),
+    ("LIQUID-TZ", "LIQUID TELECOMMUNICATIONS TANZANIA LTD"),
+    ("TTCL", "TANZANIA TELECOMMUNICATIONS CORPORATION (TTCL)"),
+    ("ZANLINK", "ZANLINK LTD"),
+    ("GNC-SOL", "GNC SOLUTIONS LTD"),
+    ("EGYPRO", "EGYPRO TANZANIA LTD"),
+    ("BESTONE", "BEST ONE CO. LTD"),
+    ("UNKDEB", "UNKNOWN DEBTOR (TZS - COD)"),
 ]
 
 ASSEMBLY_TYPES = list(ASSEMBLY_BOM.keys())
